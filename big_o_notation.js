@@ -22,16 +22,16 @@ class LinkedList {
     const newNode = new Node(data);
 
     if (this.head === null) {
-      this.head = newNode; // this assumes the Linked List is empty
+      this.head = newNode;// this assumes the Linked List is empty// assign the new node as the head of the link
     } else {
 
       // put your codes here
       // write the logic if LL is not empty
-    let lastNode = this.head;
-    while (lastNode.next !== null) {
-      lastNode = lastNode.next;
+    let lastNode = this.head;//find the last node and append the new node at the end !
+    while (lastNode.next !== null) { // Inside the loop, update lastNode to be the next node in the list until we reach the last node.
+      lastNode = lastNode.next; 
     }
-    lastNode.next = newNode;
+    lastNode.next = newNode; //Once we find the last node, assign the next property of the last node to the new node:
       
     }
   }
